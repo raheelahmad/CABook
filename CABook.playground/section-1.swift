@@ -11,16 +11,27 @@ import QuartzCore
 CALayer.contents can be AnyObject, but is drawn only for a CGImage object (not UIImage)
 */
 
-//Chapter2.layerContents()
+Chapter2.layerContentsGravity()
 
 struct Chapter2 {
+	
+	static func layerContentsGravity() { // Listing
+		let tajImage = UIImage(named: "taj_mahal.jpg")
+		var view = Helpers.basicView()
+		view.layer.contentsGravity = kCAGravityLeft // or any other of the string constants
+		view.layer.contents = tajImage.CGImage
+		let m = view.layer.contentsScale
+		view
+	}
+	
 	static func layerContents() { // Listing 2.1
 		let tajImage = UIImage(named: "taj_mahal.jpg")
-		var view = Helpers.basicView(CGSize(width: 1280, height: 736))
+		var view = Helpers.basicView()
 		// Apparently, with Swift's bridging, we don't have to explcitly cast with (__bridge id)
 		view.layer.contents = tajImage.CGImage
 		view
 	}
+	
 }
 
 /**
@@ -43,7 +54,7 @@ View keeps a backing layer (.layer) and is responsible for managing their hierar
 
 struct Chapter1 {
 	static func hostedLayer() {
-		var view = Helpers.basicView(CGSize(width: 300, height: 400))
+		var view = Helpers.basicView(size: CGSize(width: 300, height: 400))
 		var hostedLayer = CALayer()
 		hostedLayer.frame = CGRect(x: 20, y: 20, width: 260, height: 360)
 		hostedLayer.backgroundColor = UIColor(hue: 0.3, saturation: 1.0, brightness: 0.8, alpha: 1.0).CGColor
@@ -54,7 +65,7 @@ struct Chapter1 {
 
 
 struct Helpers {
-	static func basicView(size: CGSize) -> UIView {
+	static func basicView(size: CGSize = CGSize(width: 400, height: 400)) -> UIView {
 		var view = UIView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
 		view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
 		return view
