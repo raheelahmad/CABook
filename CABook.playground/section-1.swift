@@ -11,12 +11,31 @@ import QuartzCore
 CALayer.contents can be AnyObject, but is drawn only for a CGImage object (not UIImage)
 */
 
-Chapter2.layerContentsGravity()
+Chapter2.masksToBounds()
 
 struct Chapter2 {
+	static func masksToBounds() {
+		var baseView = Helpers.basicView(size: CGSize(width: 800, height: 800))
+		
+		let containerLayer = CALayer()
+		containerLayer.frame = CGRect(x: 150, y: 150, width: 500, height: 500)
+		containerLayer.backgroundColor = UIColor.darkGrayColor().CGColor
+		
+		let tajLayer = CALayer()
+		let image = Helpers.tajImage()
+		tajLayer.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+		tajLayer.contents = image.CGImage
+		
+		containerLayer.addSublayer(tajLayer)
+		baseView.layer.addSublayer(containerLayer)
+		
+//		containerLayer.masksToBounds = true
+		
+		baseView
+	}
 	
-	static func layerContentsGravity() { // Listing
-		let tajImage = UIImage(named: "taj_mahal.jpg")
+	static func layerContentsGravity() {
+		let tajImage = Helpers.tajImage()
 		var view = Helpers.basicView()
 		view.layer.contentsGravity = kCAGravityLeft // or any other of the string constants
 		view.layer.contents = tajImage.CGImage
@@ -25,7 +44,7 @@ struct Chapter2 {
 	}
 	
 	static func layerContents() { // Listing 2.1
-		let tajImage = UIImage(named: "taj_mahal.jpg")
+		let tajImage = Helpers.tajImage()
 		var view = Helpers.basicView()
 		// Apparently, with Swift's bridging, we don't have to explcitly cast with (__bridge id)
 		view.layer.contents = tajImage.CGImage
@@ -65,9 +84,13 @@ struct Chapter1 {
 
 
 struct Helpers {
+	static func tajImage() -> UIImage {
+		return UIImage(named: "taj_mahal.jpg")
+	}
+	
 	static func basicView(size: CGSize = CGSize(width: 400, height: 400)) -> UIView {
 		var view = UIView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-		view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
+		view.backgroundColor = UIColor(white: 0.85, alpha: 1.0)
 		return view
 	}
 }
