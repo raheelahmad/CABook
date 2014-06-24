@@ -11,9 +11,23 @@ import QuartzCore
 CALayer.contents can be AnyObject, but is drawn only for a CGImage object (not UIImage)
 */
 
-//Chapter2.contentsRectSprites()
+Chapter2.contentsCenter()
 
 struct Chapter2 {
+    static func contentsCenter() {
+        let baseView = Helpers.basicView(size: CGSize(width: 500, height: 500))
+        let iosImage = UIImage(named: "ios.png")
+        let iosLayer = CALayer()
+        iosLayer.contents = iosImage.CGImage
+        iosLayer.frame = baseView.bounds
+        // setting an inset rect (in unit coordinates) will stretch the layer's backing image with respect to the border
+        //  Similar to the UIImage.resizableImageWithCapInsets: but can be applied to any image
+        //  This setting is available in Xcode IB for a view's inspector as Stretching parameters
+        iosLayer.contentsCenter = CGRect(x: 0.25, y: 0.25, width: 0.5, height: 0.5)
+        baseView.layer.addSublayer(iosLayer)
+        
+        baseView // timeline this
+    }
 	
 	static func contentsRectSprites() {
 		let spriteImage = UIImage(named: "monuments_sprite.png")
