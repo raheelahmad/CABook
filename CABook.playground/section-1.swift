@@ -3,6 +3,82 @@
 import UIKit
 import QuartzCore
 
+/*
+ * Chapter 3
+ */
+
+// Frame is a computed property from bounds, position & transform
+// Setting a transform will change the frame making them different from the bounds
+
+maskingAndShadows()
+
+func maskingAndShadows() {
+    var baseView = Helpers.basicView()
+    var layerBelow = CALayer()
+    var layerAbove = CALayer()
+    var p = 50
+    layerBelow.zPosition = 1.0
+    for layer in [layerBelow, layerAbove] {
+        let side = 100
+        var container = CALayer()
+        container.frame = CGRect(x: p, y: p, width: side, height: side)
+        container.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        container.shadowOpacity = 0.4
+        container.shadowRadius = 20.0
+        
+        layer.frame = container.bounds
+        layer.backgroundColor = Helpers.randomColor()
+        layer.cornerRadius = 14.0
+        layer.borderWidth = 2.0
+        layer.masksToBounds = true
+        let s = CAShapeLayer()
+        s.path = UIBezierPath(ovalInRect: CGRect(x: -40, y: -40, width: 120, height: 120)).CGPath
+        s.fillColor = Helpers.randomColor()
+        layer.addSublayer(s)
+        container.addSublayer(layer)
+        
+        baseView.layer.addSublayer(container)
+        p *= 2
+    }
+    
+    baseView
+}
+
+class HandView: UIView {
+    init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    override func drawRect(rect: CGRect) {
+        let w = self.bounds.size.width
+        let h = self.bounds.size.height
+        let ctx = UIGraphicsGetCurrentContext()
+        
+        CGContextSetFillColorWithColor(ctx, UIColor.whiteColor().CGColor)
+        CGContextFillRect(ctx, self.bounds)
+        
+        CGContextSetStrokeColorWithColor(ctx, UIColor.blueColor().CGColor)
+        CGContextSetLineWidth(ctx, 1.0)
+        CGContextMoveToPoint(ctx, 0, h)
+        CGContextAddLineToPoint(ctx, w/2.0, 0.0)
+        CGContextAddLineToPoint(ctx, w, h)
+        
+        CGContextStrokePath(ctx)
+    }
+}
+
+func drawClock() {
+    let w = 400, h = 400
+    var baseView = Helpers.basicView(size: CGSize(width: w, height: h))
+    let handFrame = CGRect(x: w/2, y: h/2, width: 15, height: h/2)
+    let handView = HandView(frame: handFrame)
+    handView.layer.anchorPoint = CGPoint(x:0.0, y:1.0)
+    handView.frame = handFrame
+    handView.transform = CGAffineTransformMakeTranslation(100, 20)
+    baseView.addSubview(handView)
+    baseView
+}
+
+
 /**
 * CHAPTER 2
 */
@@ -11,9 +87,40 @@ import QuartzCore
 CALayer.contents can be AnyObject, but is drawn only for a CGImage object (not UIImage)
 */
 
-Chapter2.contentsCenter()
+//Chapter2.drawRect()
 
 struct Chapter2 {
+    
+    static func drawRect() { // not working: possibly because of CALayerDelegate + Swift ?
+        // drawRect is not needed if layer has contents or using a background color
+        //  otherwise, it creates a backing image of view.size * contentsScale
+        //  drawRect draws into the backing image via CG, which is then cached until need to be redrawn
+        
+        // CALayer asks its delegate (the view if it's a view's backing layer) to displayLayer:
+        // or to drawLayer:inContext:
+        // the second sets up an empty image first and then calls with a context setup to draw in that image
+        class LayerDelegate {
+            func drawLayer(layer: CALayer?, inContext context: CGContextRef?) {
+                println("Draw")
+                CGContextSetLineWidth(context, 2.0)
+                CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
+                CGContextStrokeEllipseInRect(context, CGRectInset(layer!.bounds, 20, 20))
+            }
+        }
+        let layerDelegate = LayerDelegate()
+        
+        var someLayer = CALayer()
+        someLayer.frame = CGRect(x: 20, y: 20, width: 200, height: 200)
+        someLayer.backgroundColor = UIColor.whiteColor().CGColor
+        someLayer.delegate = layerDelegate
+        someLayer.display()
+        
+        var baseView = Helpers.basicView(size: CGSize(width: 400, height: 400))
+        baseView.backgroundColor = UIColor.blueColor()
+        baseView.layer.addSublayer(someLayer)
+        baseView
+    }
+    
     static func contentsCenter() {
         let baseView = Helpers.basicView(size: CGSize(width: 500, height: 500))
         let iosImage = UIImage(named: "ios.png")
@@ -141,4 +248,11 @@ struct Helpers {
 		view.backgroundColor = UIColor(white: 0.85, alpha: 1.0)
 		return view
 	}
+    
+    static func randomColor() -> CGColorRef {
+        let r = CGFloat(arc4random() % 255) / 255.0
+        let g = CGFloat(arc4random() % 255) / 255.0
+        let b = CGFloat(arc4random() % 255) / 255.0
+        return UIColor(red: r, green: g, blue: b, alpha: 1.0).CGColor
+    }
 }
