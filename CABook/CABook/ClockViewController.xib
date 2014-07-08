@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClockViewController" customModule="CABook" customModuleProvider="target">
+            <connections>
+                <outlet property="clockView" destination="bQz-Xi-dFe" id="uFw-10-m1C"/>
+                <outlet property="hourView" destination="k3n-7r-AUj" id="dih-b2-vlr"/>
+                <outlet property="minuteView" destination="8W7-WS-1LB" id="lSq-2D-LMb"/>
+                <outlet property="secondsView" destination="M9W-Ev-6AQ" id="m7P-rR-y0J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-yu-MPk">
+                    <rect key="frame" x="79" y="82" width="336" height="337"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-Xi-dFe">
+                            <rect key="frame" x="18" y="18" width="300" height="302"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hour" translatesAutoresizingMaskIntoConstraints="NO" id="k3n-7r-AUj">
+                            <rect key="frame" x="149" y="119" width="38" height="99"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minute" translatesAutoresizingMaskIntoConstraints="NO" id="8W7-WS-1LB">
+                            <rect key="frame" x="149" y="98" width="38" height="142"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seconds" translatesAutoresizingMaskIntoConstraints="NO" id="M9W-Ev-6AQ">
+                            <rect key="frame" x="149" y="98" width="38" height="142"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="337" id="XKI-lE-xEO"/>
+                        <constraint firstAttribute="width" constant="336" id="tfL-pb-sCr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.9466806789340102" green="0.9466806789340102" blue="0.9466806789340102" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ewV-yu-MPk" secondAttribute="centerX" constant="-7" id="Drk-Xm-T1e"/>
+                <constraint firstAttribute="centerY" secondItem="ewV-yu-MPk" secondAttribute="centerY" constant="-10.5" id="pio-0D-k9L"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[default]"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clock" width="608" height="615"/>
+        <image name="hour" width="134" height="296"/>
+        <image name="minute" width="94" height="336"/>
+        <image name="seconds" width="66" height="294"/>
+    </resources>
+</document>
