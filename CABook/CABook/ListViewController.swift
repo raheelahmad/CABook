@@ -9,9 +9,11 @@
 import UIKit
 
 struct List {
-    static let chapters = [
-		[ chapterKey: "Chapter 3", exercisesKey: [ "Clock" ]]
-						  ]
+    static let chapters =
+		[
+            [chapterKey: "Chapter 3", exercisesKey: [ "Clock" ]],
+            [chapterKey: "Chapter 4", exercisesKey: [ "MasksAndShadows"]]
+        ]
 	static let nameKey = "name"
 	static let chapterKey = "chapterName"
 	static let exercisesKey = "exercises"
@@ -44,6 +46,7 @@ extension ListViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if let exercise = exerciseForIndexPath(indexPath) {
             let viewControllerName = exercise + "ViewController"
+            println(viewControllerName)
             let vcClass = NSClassFromString(viewControllerName) as NSObject.Type
             let vc = vcClass.self() as UIViewController
             self.navigationController.pushViewController(vc, animated: true)
@@ -93,9 +96,9 @@ extension ListViewController {
 		return nil
 	}
 	
-	func exercisesForSection(section: Int) -> String[]? {
+	func exercisesForSection(section: Int) -> [String]? {
 		if let chapterInfo = chapterInfoForSection(section) {
-			let exercises = chapterInfo[List.exercisesKey] as String[]
+			let exercises = chapterInfo[List.exercisesKey] as [String]
 			return exercises
 		} else {
 			return nil
@@ -104,7 +107,7 @@ extension ListViewController {
 	
 	func chapterInfoForSection(section: Int) -> NSDictionary? {
 		if section < List.chapters.count {
-			let sectionInfo = List.chapters[section]
+			let sectionInfo = List.chapters[section] as Dictionary<String, Any>
 			return sectionInfo
 		} else {
 			return nil
