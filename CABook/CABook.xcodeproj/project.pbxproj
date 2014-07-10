@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59C354D7196E0A89003BEFED /* MasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C354D5196E0A89003BEFED /* MasksViewController.swift */; };
+		59C354D8196E0A89003BEFED /* MasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C354D6196E0A89003BEFED /* MasksViewController.xib */; };
 		59C49125196818A8002F75E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49124196818A8002F75E9 /* AppDelegate.swift */; };
 		59C49127196818A8002F75E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59C49126196818A8002F75E9 /* Images.xcassets */; };
 		59C49133196818A8002F75E9 /* CABookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49132196818A8002F75E9 /* CABookTests.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59C354D5196E0A89003BEFED /* MasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasksViewController.swift; sourceTree = "<group>"; };
+		59C354D6196E0A89003BEFED /* MasksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasksViewController.xib; sourceTree = "<group>"; };
 		59C4911F196818A8002F75E9 /* CABook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CABook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C49123196818A8002F75E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59C49124196818A8002F75E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59C354D4196E0A77003BEFED /* Chapter 4 */ = {
+			isa = PBXGroup;
+			children = (
+				59C354D5196E0A89003BEFED /* MasksViewController.swift */,
+				59C354D6196E0A89003BEFED /* MasksViewController.xib */,
+			);
+			name = "Chapter 4";
+			sourceTree = "<group>";
+		};
 		59C49116196818A8002F75E9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 		59C4913C196818DE002F75E9 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				59C354D4196E0A77003BEFED /* Chapter 4 */,
 				59C4913D196818E8002F75E9 /* Chapter 3 */,
 				59C491421968E878002F75E9 /* ListViewController.swift */,
 			);
@@ -208,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59C49127196818A8002F75E9 /* Images.xcassets in Resources */,
+				59C354D8196E0A89003BEFED /* MasksViewController.xib in Resources */,
 				59C4914119681A59002F75E9 /* ClockViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +243,7 @@
 			files = (
 				59C49125196818A8002F75E9 /* AppDelegate.swift in Sources */,
 				59C4914019681A59002F75E9 /* ClockViewController.swift in Sources */,
+				59C354D7196E0A89003BEFED /* MasksViewController.swift in Sources */,
 				59C491431968E878002F75E9 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

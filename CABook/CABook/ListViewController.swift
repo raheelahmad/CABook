@@ -12,7 +12,7 @@ struct List {
     static let chapters =
 		[
             [chapterKey: "Chapter 3", exercisesKey: [ "Clock" ]],
-            [chapterKey: "Chapter 4", exercisesKey: [ "MasksAndShadows"]]
+            [chapterKey: "Chapter 4", exercisesKey: [ "Masks" ]],
         ]
 	static let nameKey = "name"
 	static let chapterKey = "chapterName"
