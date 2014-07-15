@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594B738C1974F2CE004C2735 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B738A1974F2CE004C2735 /* InfoViewController.swift */; };
+		594B738D1974F2CE004C2735 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594B738B1974F2CE004C2735 /* InfoViewController.xib */; };
+		594B73901974F99E004C2735 /* FlatteningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B738E1974F99E004C2735 /* FlatteningViewController.swift */; };
+		594B73911974F99E004C2735 /* FlatteningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594B738F1974F99E004C2735 /* FlatteningViewController.xib */; };
+		5986AA5A19725020000F0835 /* GroupOpacityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986AA5819725020000F0835 /* GroupOpacityViewController.swift */; };
+		5986AA5B19725020000F0835 /* GroupOpacityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5986AA5919725020000F0835 /* GroupOpacityViewController.xib */; };
+		5986AA5F1972ACA9000F0835 /* PerspectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986AA5E1972ACA9000F0835 /* PerspectiveViewController.swift */; };
+		5986AA631972AE7A000F0835 /* PerspectiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5986AA621972AE7A000F0835 /* PerspectiveViewController.xib */; };
 		59C354D7196E0A89003BEFED /* MasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C354D5196E0A89003BEFED /* MasksViewController.swift */; };
 		59C354D8196E0A89003BEFED /* MasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C354D6196E0A89003BEFED /* MasksViewController.xib */; };
 		59C49125196818A8002F75E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49124196818A8002F75E9 /* AppDelegate.swift */; };
@@ -15,6 +23,10 @@
 		59C4914019681A59002F75E9 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4913E19681A59002F75E9 /* ClockViewController.swift */; };
 		59C4914119681A59002F75E9 /* ClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C4913F19681A59002F75E9 /* ClockViewController.xib */; };
 		59C491431968E878002F75E9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C491421968E878002F75E9 /* ListViewController.swift */; };
+		59FED01E19736E5A005B056E /* SublayerTransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FED01C19736E5A005B056E /* SublayerTransformViewController.swift */; };
+		59FED01F19736E5A005B056E /* SublayerTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FED01D19736E5A005B056E /* SublayerTransformViewController.xib */; };
+		59FED022197371F7005B056E /* BackviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FED020197371F7005B056E /* BackviewViewController.swift */; };
+		59FED023197371F7005B056E /* BackviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FED021197371F7005B056E /* BackviewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		594B738A1974F2CE004C2735 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		594B738B1974F2CE004C2735 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		594B738E1974F99E004C2735 /* FlatteningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatteningViewController.swift; sourceTree = "<group>"; };
+		594B738F1974F99E004C2735 /* FlatteningViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlatteningViewController.xib; sourceTree = "<group>"; };
+		5986AA5819725020000F0835 /* GroupOpacityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupOpacityViewController.swift; sourceTree = "<group>"; };
+		5986AA5919725020000F0835 /* GroupOpacityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupOpacityViewController.xib; sourceTree = "<group>"; };
+		5986AA5E1972ACA9000F0835 /* PerspectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveViewController.swift; sourceTree = "<group>"; };
+		5986AA621972AE7A000F0835 /* PerspectiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerspectiveViewController.xib; sourceTree = "<group>"; };
 		59C354D5196E0A89003BEFED /* MasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasksViewController.swift; sourceTree = "<group>"; };
 		59C354D6196E0A89003BEFED /* MasksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasksViewController.xib; sourceTree = "<group>"; };
 		59C4911F196818A8002F75E9 /* CABook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CABook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +60,10 @@
 		59C4913E19681A59002F75E9 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		59C4913F19681A59002F75E9 /* ClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockViewController.xib; sourceTree = "<group>"; };
 		59C491421968E878002F75E9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		59FED01C19736E5A005B056E /* SublayerTransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SublayerTransformViewController.swift; sourceTree = "<group>"; };
+		59FED01D19736E5A005B056E /* SublayerTransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SublayerTransformViewController.xib; sourceTree = "<group>"; };
+		59FED020197371F7005B056E /* BackviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackviewViewController.swift; sourceTree = "<group>"; };
+		59FED021197371F7005B056E /* BackviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackviewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +84,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5986AA5D1972AC95000F0835 /* Chapter 5 */ = {
+			isa = PBXGroup;
+			children = (
+				5986AA5E1972ACA9000F0835 /* PerspectiveViewController.swift */,
+				5986AA621972AE7A000F0835 /* PerspectiveViewController.xib */,
+				59FED01C19736E5A005B056E /* SublayerTransformViewController.swift */,
+				59FED01D19736E5A005B056E /* SublayerTransformViewController.xib */,
+				59FED020197371F7005B056E /* BackviewViewController.swift */,
+				59FED021197371F7005B056E /* BackviewViewController.xib */,
+				594B738E1974F99E004C2735 /* FlatteningViewController.swift */,
+				594B738F1974F99E004C2735 /* FlatteningViewController.xib */,
+			);
+			name = "Chapter 5";
+			sourceTree = "<group>";
+		};
 		59C354D4196E0A77003BEFED /* Chapter 4 */ = {
 			isa = PBXGroup;
 			children = (
 				59C354D5196E0A89003BEFED /* MasksViewController.swift */,
 				59C354D6196E0A89003BEFED /* MasksViewController.xib */,
+				5986AA5819725020000F0835 /* GroupOpacityViewController.swift */,
+				5986AA5919725020000F0835 /* GroupOpacityViewController.xib */,
 			);
 			name = "Chapter 4";
 			sourceTree = "<group>";
@@ -94,6 +135,8 @@
 				59C49124196818A8002F75E9 /* AppDelegate.swift */,
 				59C49126196818A8002F75E9 /* Images.xcassets */,
 				59C49122196818A8002F75E9 /* Supporting Files */,
+				594B738A1974F2CE004C2735 /* InfoViewController.swift */,
+				594B738B1974F2CE004C2735 /* InfoViewController.xib */,
 			);
 			path = CABook;
 			sourceTree = "<group>";
@@ -126,6 +169,7 @@
 		59C4913C196818DE002F75E9 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				5986AA5D1972AC95000F0835 /* Chapter 5 */,
 				59C354D4196E0A77003BEFED /* Chapter 4 */,
 				59C4913D196818E8002F75E9 /* Chapter 3 */,
 				59C491421968E878002F75E9 /* ListViewController.swift */,
@@ -221,9 +265,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5986AA5B19725020000F0835 /* GroupOpacityViewController.xib in Resources */,
 				59C49127196818A8002F75E9 /* Images.xcassets in Resources */,
+				594B738D1974F2CE004C2735 /* InfoViewController.xib in Resources */,
+				59FED01F19736E5A005B056E /* SublayerTransformViewController.xib in Resources */,
+				594B73911974F99E004C2735 /* FlatteningViewController.xib in Resources */,
 				59C354D8196E0A89003BEFED /* MasksViewController.xib in Resources */,
 				59C4914119681A59002F75E9 /* ClockViewController.xib in Resources */,
+				5986AA631972AE7A000F0835 /* PerspectiveViewController.xib in Resources */,
+				59FED023197371F7005B056E /* BackviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +293,13 @@
 			files = (
 				59C49125196818A8002F75E9 /* AppDelegate.swift in Sources */,
 				59C4914019681A59002F75E9 /* ClockViewController.swift in Sources */,
+				594B73901974F99E004C2735 /* FlatteningViewController.swift in Sources */,
+				59FED022197371F7005B056E /* BackviewViewController.swift in Sources */,
 				59C354D7196E0A89003BEFED /* MasksViewController.swift in Sources */,
+				594B738C1974F2CE004C2735 /* InfoViewController.swift in Sources */,
+				5986AA5F1972ACA9000F0835 /* PerspectiveViewController.swift in Sources */,
+				5986AA5A19725020000F0835 /* GroupOpacityViewController.swift in Sources */,
+				59FED01E19736E5A005B056E /* SublayerTransformViewController.swift in Sources */,
 				59C491431968E878002F75E9 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BackviewViewController" customModule="CABook" customModuleProvider="target">
+            <connections>
+                <outlet property="tajView" destination="Ysy-iS-Vlf" id="4FH-ge-FBM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taj-mahal" translatesAutoresizingMaskIntoConstraints="NO" id="Ysy-iS-Vlf">
+                    <rect key="frame" x="90" y="127" width="300" height="225"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="DFE-D6-OcP"/>
+                        <constraint firstAttribute="width" constant="300" id="N0W-oA-nPA"/>
+                    </constraints>
+                </imageView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPL-q3-D4e">
+                    <rect key="frame" x="90" y="391" width="51" height="31"/>
+                    <connections>
+                        <action selector="switchDoubleSidedness:" destination="-1" eventType="valueChanged" id="35k-JA-4mm"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOUBLE SIDED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o97-KH-cpi">
+                    <rect key="frame" x="147" y="408" width="83" height="13.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKQ-pX-Wkv">
+                    <rect key="frame" x="414" y="435" width="22" height="22"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showInfo:" destination="-1" eventType="touchUpInside" id="y8s-hn-3TE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Ysy-iS-Vlf" secondAttribute="centerX" id="3sy-Xt-wdm"/>
+                <constraint firstItem="rPL-q3-D4e" firstAttribute="top" secondItem="Ysy-iS-Vlf" secondAttribute="bottom" constant="39" id="9sw-yT-A7C"/>
+                <constraint firstAttribute="centerY" secondItem="Ysy-iS-Vlf" secondAttribute="centerY" constant="0.5" id="DFg-qB-Yv2"/>
+                <constraint firstItem="rPL-q3-D4e" firstAttribute="bottom" secondItem="o97-KH-cpi" secondAttribute="bottom" constant="0.5" id="HE2-xV-to4"/>
+                <constraint firstAttribute="bottom" secondItem="sKQ-pX-Wkv" secondAttribute="bottom" constant="23" id="HEa-uV-aTA"/>
+                <constraint firstItem="o97-KH-cpi" firstAttribute="leading" secondItem="rPL-q3-D4e" secondAttribute="trailing" constant="8" id="fQt-yr-KvM"/>
+                <constraint firstItem="rPL-q3-D4e" firstAttribute="leading" secondItem="Ysy-iS-Vlf" secondAttribute="leading" id="gTL-xn-29l"/>
+                <constraint firstAttribute="trailing" secondItem="sKQ-pX-Wkv" secondAttribute="trailing" constant="44" id="mPK-YW-cX2"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="taj-mahal" width="300" height="225"/>
+    </resources>
+</document>

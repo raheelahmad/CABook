@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PerspectiveViewController">
+            <connections>
+                <outlet property="slider" destination="vOR-gp-HNL" id="SfY-lf-zIO"/>
+                <outlet property="tajHeightConstraint" destination="YHz-bM-j5s" id="tgW-sY-49z"/>
+                <outlet property="tajView" destination="HUa-Cg-VNL" id="cYT-Iu-0ay"/>
+                <outlet property="tajWidthConstraint" destination="GGU-75-SUL" id="Der-RX-7P4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="bbc-gH-h0a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taj-mahal" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-Cg-VNL">
+                    <rect key="frame" x="121" y="120" width="239" height="239"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="239" id="GGU-75-SUL"/>
+                        <constraint firstAttribute="height" constant="239" id="YHz-bM-j5s"/>
+                    </constraints>
+                </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vOR-gp-HNL">
+                    <rect key="frame" x="119" y="385" width="243" height="31"/>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="Xu5-9c-dOa"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSPECTIVE DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-PS-sK0">
+                    <rect key="frame" x="185" y="446" width="134" height="13.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp8-Zx-ie8">
+                    <rect key="frame" x="121" y="422" width="19" height="13.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ca-x5-E8w">
+                    <rect key="frame" x="335" y="422" width="25" height="13.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Ca-x5-E8w" firstAttribute="leading" secondItem="Dp8-Zx-ie8" secondAttribute="trailing" constant="195" id="6Ms-LC-BTU"/>
+                <constraint firstAttribute="centerY" secondItem="HUa-Cg-VNL" secondAttribute="centerY" constant="0.5" id="GOn-fP-zeo"/>
+                <constraint firstItem="oaP-PS-sK0" firstAttribute="centerX" secondItem="vOR-gp-HNL" secondAttribute="centerX" constant="11.5" id="PB7-eP-Yo9"/>
+                <constraint firstItem="Dp8-Zx-ie8" firstAttribute="top" secondItem="0Ca-x5-E8w" secondAttribute="top" id="RdV-pJ-Ed3"/>
+                <constraint firstAttribute="centerX" secondItem="HUa-Cg-VNL" secondAttribute="centerX" constant="-0.5" id="SeK-70-Mmm"/>
+                <constraint firstItem="Dp8-Zx-ie8" firstAttribute="leading" secondItem="vOR-gp-HNL" secondAttribute="leading" id="c4N-Xc-GMj"/>
+                <constraint firstItem="oaP-PS-sK0" firstAttribute="top" secondItem="vOR-gp-HNL" secondAttribute="bottom" constant="31" id="cFf-Np-v4X"/>
+                <constraint firstItem="Dp8-Zx-ie8" firstAttribute="top" secondItem="vOR-gp-HNL" secondAttribute="bottom" constant="7" id="e5o-uK-gah"/>
+                <constraint firstItem="HUa-Cg-VNL" firstAttribute="trailing" secondItem="vOR-gp-HNL" secondAttribute="trailing" id="fv2-8O-50S"/>
+                <constraint firstItem="HUa-Cg-VNL" firstAttribute="leading" secondItem="vOR-gp-HNL" secondAttribute="leading" id="gO5-Hx-ytQ"/>
+                <constraint firstItem="vOR-gp-HNL" firstAttribute="top" secondItem="HUa-Cg-VNL" secondAttribute="bottom" constant="26" id="gn3-aP-A4j"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="taj-mahal" width="300" height="225"/>
+    </resources>
+</document>

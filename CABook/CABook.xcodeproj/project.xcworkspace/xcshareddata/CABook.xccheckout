@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76B40F24-0A8A-4B8B-B19F-8776DF1B98C8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CABook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3479137E-F792-485E-838F-B9CAB3A5010D</key>
+		<string>ssh://github.com/raheelahmad/CABook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CABook/CABook.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3479137E-F792-485E-838F-B9CAB3A5010D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/raheelahmad/CABook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3479137E-F792-485E-838F-B9CAB3A5010D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3479137E-F792-485E-838F-B9CAB3A5010D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CABook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

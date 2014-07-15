@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlatteningViewController" customModule="CABook" customModuleProvider="target">
+            <connections>
+                <outlet property="innerView" destination="u9G-yz-Kq1" id="UXm-jy-Af1"/>
+                <outlet property="outerView" destination="fVX-FX-wWc" id="xTS-bM-adm"/>
+                <outlet property="switch" destination="Ib9-bp-7sd" id="jhR-tw-Cnm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-FX-wWc">
+                    <rect key="frame" x="150" y="150" width="180" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9G-yz-Kq1">
+                            <rect key="frame" x="30" y="29" width="120" height="120"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="1N1-kE-28q"/>
+                                <constraint firstAttribute="width" constant="120" id="mhu-T1-d21"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="u9G-yz-Kq1" secondAttribute="centerX" id="E36-U5-VTX"/>
+                        <constraint firstAttribute="height" constant="180" id="PaY-89-5QH"/>
+                        <constraint firstAttribute="width" constant="180" id="a1t-Ja-BvE"/>
+                        <constraint firstAttribute="centerY" secondItem="u9G-yz-Kq1" secondAttribute="centerY" constant="0.5" id="sJt-Hq-F3a"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ib9-bp-7sd">
+                    <rect key="frame" x="217" y="64" width="47" height="29"/>
+                    <segments>
+                        <segment title="Z"/>
+                        <segment title="X"/>
+                    </segments>
+                    <connections>
+                        <action selector="applyRotation:" destination="-1" eventType="valueChanged" id="f0E-8U-KJI"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROTATION AXIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwy-uI-nhC">
+                    <rect key="frame" x="126" y="72" width="83" height="13.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPh-go-6Qi">
+                    <rect key="frame" x="438" y="438" width="22" height="22"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showInfo:" destination="-1" eventType="touchUpInside" id="zq9-8A-4mv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LPh-go-6Qi" secondAttribute="bottom" constant="20" id="Fs1-aB-MwK"/>
+                <constraint firstAttribute="centerX" secondItem="Ib9-bp-7sd" secondAttribute="centerX" constant="-0.5" id="YUf-pj-gnM"/>
+                <constraint firstItem="Ib9-bp-7sd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="de6-7l-h8P"/>
+                <constraint firstAttribute="trailing" secondItem="LPh-go-6Qi" secondAttribute="trailing" constant="20" id="lgU-pU-9CV"/>
+                <constraint firstItem="Dwy-uI-nhC" firstAttribute="centerY" secondItem="Ib9-bp-7sd" secondAttribute="centerY" constant="0.75" id="mk5-mL-PYY"/>
+                <constraint firstAttribute="centerX" secondItem="fVX-FX-wWc" secondAttribute="centerX" constant="-0.5" id="pfC-O2-3qo"/>
+                <constraint firstItem="Ib9-bp-7sd" firstAttribute="leading" secondItem="Dwy-uI-nhC" secondAttribute="trailing" constant="8" id="rH1-Tc-hJy"/>
+                <constraint firstAttribute="centerY" secondItem="fVX-FX-wWc" secondAttribute="centerY" id="u76-O6-BrI"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
